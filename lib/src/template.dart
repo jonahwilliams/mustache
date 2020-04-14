@@ -29,6 +29,9 @@ class Template implements m.Template {
   String get name => _name;
 
   @override
+  List<Node> get nodes => _nodes;
+  
+  @override
   String renderString(values) {
     var buf = StringBuffer();
     render(values, buf);
