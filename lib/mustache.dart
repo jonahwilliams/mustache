@@ -1,4 +1,5 @@
 import 'src/template.dart' as t;
+import 'src/node.dart';
 
 /// A Template can be efficiently rendered multiple times with different
 /// values.
@@ -16,6 +17,7 @@ abstract class Template {
 
   String? get name;
   String get source;
+  List<Node> get nodes;
 
   /// [values] can be a combination of Map, List, String. Any non-String object
   /// will be converted using toString(). Null values will cause a
